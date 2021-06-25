@@ -1,0 +1,126 @@
+a{
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.form-wrapper>div{
+    display: inline-block;
+}
+
+.form-wrapper textarea, .form-wrapper input, .form-wrapper select{
+    transition: 0.24s;
+}
+
+.form-wrapper textarea:focus{
+    background-color: rgb(233, 233, 233);
+}
+
+.form-wrapper input:focus{
+    background-color: rgb(233, 233, 233);
+}
+
+.form-wrapper select:focus{
+    background-color: rgb(233, 233, 233);
+}
+
+.category-date-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-date-container>div{
+    width: 100%;
+}
+
+.category-container{
+    margin-right: 0.2rem;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.my-btn{
+    all: unset;
+    padding: 1rem 1.5rem;
+    border-radius: 0.2rem;
+    color: white;
+}
+
+#add-tasks-btn{
+    margin-right: 0.5rem;
+}
+
+.cards-container{
+    margin-top: 1rem;
+}
+
+.my-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card{
+    border: none;
+    background-color: rgba(104, 92, 92, 0.096) !important;
+    border-radius: 0;
+    border: solid rgba(128, 128, 128, 0.61) 1px;
+    border-top: none;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.due-date-wrapper{
+    padding-left: 1.25rem;
+}
+
+.card:hover{
+    background-color: rgba(128, 128, 128, 0.178) !important;
+}
+
+.card:first-child{
+    border-top: solid rgba(128, 128, 128, 0.61) 1px;
+}
+
+.checkbox-container{
+    margin-right: 0.2rem;
+}
+
+.checkbox-container>input[type = checkbox]{
+    width: 1rem;
+    height: 1rem;
+}
+
+.checkbox-description-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.badge{
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.badge-personal{
+    background-color: rgb(118, 118, 202);
+}
+
+.badge-work{
+    background-color: rgb(138, 8, 138);
+}
+
+.badge-school{
+    background-color: orange;
+}
+
+.badge-cleaning{
+    background-color: rgb(211, 43, 121);
+}
+
+.badge-other{
+    background-color: rgb(99, 89, 89);
+}

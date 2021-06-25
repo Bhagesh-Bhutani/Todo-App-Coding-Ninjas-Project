@@ -1,3 +1,73 @@
 <link rel="stylesheet" href="/css/home.css">
 
-<h1>Heyy</h1>
+<div class = "form-wrapper">
+    <div class = "col-0 col-sm-1 col-md-2 col-lg-3"></div>
+    <div class = "col-12 col-sm-10 col-md-8 col-lg-6">
+        <!-- Form -->
+        <form action = "/create-task" method = "POST">
+            <div class = "form-group">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" rows="1" class = "form-control" placeholder = "Task Description" required></textarea>
+            </div>
+
+            <div class = "category-date-container">
+                <div class = "category-container">
+                    <label for="category">Category</label>
+                    <select name="category" id="category" class = "form-control" required>
+                        <option value="personal" selected>Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class = "due-date-container">
+                    <label for="due_date">Due Date</label>
+                    <input name = "due_date" id = "due_date" type="date" class = "form-control">
+                </div>
+            </div>
+
+            <div class = "buttons-container">
+                <button id = "add-tasks-btn" type = "submit" class = "bg-success my-btn"><i class="fa fa-plus" aria-hidden="true"></i> ADD TASK</button>
+                <button id = "delete-tasks-btn" type = "button" class = "bg-danger my-btn"><i class="fas fa-trash-alt"></i> DELETE TASKS</button>
+            </div>
+        </form>
+
+        <!-- Task Cards will be rendered below -->
+
+        <div class = "cards-container">
+            <% for(task of tasks){ %>
+                <div class = "card bg-transparent">
+                    <div class = "card-body my-card">
+                        <div class = "checkbox-description-container">
+                            <div class = "checkbox-container d-inline-block">
+                                <input type="checkbox" name = "delete-task" value = <%= task._id %>>
+                            </div>
+                            <h5 class = "card-title d-inline-block">
+                                <%= task.description %> 
+                            </h5>
+                        </div>
+                        
+                        <div class = "card-badge-container">
+                            <div class = "badge badge-<%= task.category %>">
+                                <%= task.category[0].toUpperCase() + task.category.substring(1) %> 
+                            </div>  
+                        </div>
+                    </div>
+
+                    <div class = "due-date-wrapper">
+                        <% if(task.due_date !== ''){ %>
+                            <h6><i class="fas fa-calendar-alt"></i> <%= task.due_date %></h6>
+                        <% } else{ %>
+                            <h6><i class="fas fa-calendar-alt"></i> NO DEADLINE</h6>
+                        <% } %> 
+                    </div>
+                </div>
+            <% } %> 
+        </div>
+    </div>
+    <div class = "col-0 col-sm-1 col-md-2 col-lg-3"></div>
+</div>
+
+<script src="/js/home.js"></script>

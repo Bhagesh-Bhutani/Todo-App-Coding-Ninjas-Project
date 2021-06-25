@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(48, 5, 48);
+}
+
+header{
+    /* background-color: #6b0f1a;
+    background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%); */
+    background-image: url('/images/title_background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 3rem;
+}
+
+header>h1{
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
+
+header>p{
+    padding-bottom: 4rem;
+}
