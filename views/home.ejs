@@ -58,7 +58,10 @@
 
                     <div class = "due-date-wrapper">
                         <% if(task.due_date !== ''){ %>
-                            <h6><i class="fas fa-calendar-alt"></i> <%= task.due_date %></h6>
+                            <h6><i class="fas fa-calendar-alt"></i>
+                                <% var months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"] %> 
+                                <%= task.due_date.substring(8) + " " + months[parseInt(task.due_date.substring(5,7)) - 1] + " " + task.due_date.substring(0,4) %>
+                            </h6>
                         <% } else{ %>
                             <h6><i class="fas fa-calendar-alt"></i> NO DEADLINE</h6>
                         <% } %> 
