@@ -85,6 +85,10 @@ a{
     border-top: solid rgba(128, 128, 128, 0.61) 1px;
 }
 
+input[type = checkbox]{
+    cursor: pointer;
+}
+
 .checkbox-container{
     margin-right: 0.2rem;
 }
